@@ -1,8 +1,9 @@
 # Smart Thermostat Simulation
-A simulation of a smart thermostat in a house.
+A simulation of a smart thermostat that allows the user to freely observe and control the temperature flow of all the rooms in a house.
 
 ## Index
 
+* ### [Introduction](#intro)
 * ### [Prerequisites](#pre)
 * ### [Getting Started](#get)
 * ### [Run a simulation](#run)
@@ -10,6 +11,13 @@ A simulation of a smart thermostat in a house.
 
 
 
+## <a name="intro"></a>Introduction
+The thermostat is simulated via Cooja, using:
+
+* Contiki for the sensor's structure and backend
+* NodeRED for the thermostat's frontend implementation, which comprises:
+  * Full view and control of the status of all rooms in the house
+  * MQTT communications to ThingSpeak for data collection
 
 
 
@@ -18,6 +26,7 @@ Before anything, we need to download the following softwares:
 
 * [Instant Contiki 2.7](https://sourceforge.net/projects/contiki/files/Instant%20Contiki/Instant%20Contiki%202.7/) VM
 * VMWare or VirtualBox to run Instant Contiki
+* A [ThingSpeak](https://thingspeak.com/) account for data collection
 
 ## <a name="get"></a>Getting Started
 Now let's setup our environment:
@@ -59,7 +68,7 @@ Now we are ready to run a simulation!
   
   * On the terminal, do the following:
   
-  ``` cd contiki/examples/ipv6/rpl-border-router ```  
-  ``` make connect-router-cooja ```
+    ``` cd contiki/examples/ipv6/rpl-border-router ```  
+    ``` make connect-router-cooja ```
   
   
